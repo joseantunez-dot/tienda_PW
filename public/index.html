@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi tienda</title>
+<link rel="stylesheet" href="/estilos.css">
+<script src="/inicio.js" defer></script>
+</head>
+<body>
+<main>
+<h1>Mi tienda</h1>
+<button id="abrir" type="button">Consultar producto</button>
+<a class="boton" href="/catalogo">Ver todos los productos</a>
+<a class="boton" href="/administracion">
+Administrar catálogo
+</a>
+<dialog id="modal" aria-labelledby="titulo-modal">
+<h2 id="titulo-modal">Consultar producto</h2>
+<form id="consulta">
+<label for="producto-id">ID del producto</label>
+<input id="producto-id" type="number" min="1" step="1" required autofocus>
+<button id="buscar" type="submit">Buscar</button>
+<button id="cerrar" type="button">Cerrar</button>
+</form>
+<p id="resultado" role="status"></p>
+</dialog>
+</main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body { font: 1rem system-ui, sans-serif; margin: 2rem; }
+main { max-width: 48rem; margin: auto; }
+button, .boton {
+display: inline-block;
+background: #155e59;
+color: white;
+border: 0;
+border-radius: .4rem;
+padding: .6rem .9rem;
+font: inherit;
+text-decoration: none;
+cursor: pointer;
+}
+button:disabled { opacity: .65; }
+dialog { border: 1px solid #94a3b8; border-radius: .5rem; }
+dialog::backdrop { background: #0f172a99; }
+input { width: 6rem; padding: .4rem; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: .6rem; border-bottom: 1px solid #94a3b8; }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administración del catálogo</title>
+<link rel="stylesheet" href="/estilos.css">
+<script src="/administracion.js" defer></script>
+</head>
+<body>
+<main>
+<nav aria-label="Navegación">
+<a href="/">Inicio</a>
+<a href="/catalogo">Ver catálogo</a>
+</nav>
+<h1>Administración del catálogo</h1>
+
+<h2>Agregar producto</h2>
+<p>El servidor asignará el ID del producto.</p>
+<form id="alta-producto" class="formulario-admin">
+<label for="nombre">Nombre</label>
+<input id="nombre" name="nombre" type="text" maxlength="100" required>
+<label for="precio">Precio (MXN)</label>
+<input id="precio" name="precio" type="number" min="0" step="0.01" required>
+<button id="guardar" type="submit">Agregar producto</button>
+</form>
+<p id="mensaje" role="status" aria-live="polite"></p>
+
+<h2>Reemplazar producto</h2>
+<p>Sustituye todos los datos de un producto existente.</p>
+<form id="editar-producto" class="formulario-admin">
+<label for="put-id">ID del producto</label>
+<input id="put-id" name="id" type="number" min="1" step="1" required>
+<label for="put-nombre">Nuevo nombre</label>
+<input id="put-nombre" name="nombre" type="text" maxlength="100" required>
+<label for="put-precio">Nuevo precio (MXN)</label>
+<input id="put-precio" name="precio" type="number" min="0" step="0.01" required>
+<button id="btn-put" type="submit">Reemplazar producto</button>
+</form>
+<p id="mensaje-put" role="status" aria-live="polite"></p>
+
+<h2>Actualizar parcialmente </h2>
+<p>Llena únicamente el campo que deseas modificar.</p>
+<form id="actualizar-parcial" class="formulario-admin">
+<label for="patch-id">ID del producto</label>
+<input id="patch-id" name="id" type="number" min="1" step="1" required>
+<label for="patch-nombre">Nuevo nombre (opcional)</label>
+<input id="patch-nombre" name="nombre" type="text" maxlength="100">
+<label for="patch-precio">Nuevo precio (opcional)</label>
+<input id="patch-precio" name="precio" type="number" min="0" step="0.01">
+<button id="btn-patch" type="submit">Actualizar parcialmente</button>
+</form>
+<p id="mensaje-patch" role="status" aria-live="polite"></p>
+
+<h2>Eliminar producto</h2>
+<form id="eliminar-producto" class="formulario-admin">
+<label for="delete-id">ID del producto</label>
+<input id="delete-id" name="id" type="number" min="1" step="1" required>
+<button id="btn-delete" type="submit">Eliminar producto</button>
+</form>
+<p id="mensaje-delete" role="status" aria-live="polite"></p>
+
+<p>Los productos agregados se conservan durante la ejecución del servidor.
+Al reiniciarlo, se carga el arreglo inicial.</p>
+</main>
+</body>
+</html>
